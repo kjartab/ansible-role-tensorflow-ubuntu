@@ -1,25 +1,22 @@
-Role Name
+Tensorflow Ubuntu
 =========
 
-A brief description of the role goes here.
+Currently installs a specific combination which works for my Dell M4800 laptop (Quadro K2100M): Tensorflow 1.4 and CUDA Toolkit 8.0.
 
-https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1604
 
 
 Requirements
 ------------
 
-A laptop with CUDA 3.x supported NVIDIA graphics card
+- NVIDIA CUDA 3.x compatible graphics card
 
 Role Variables
 --------------
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
 
 Dependencies
 ------------
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
 
 Example Playbook
 ----------------
@@ -28,14 +25,14 @@ Including an example of how to use your role (for instance, with variables passe
 
     - hosts: servers
       roles:
-         - { role: username.rolename, x: 42 }
+         - { role: kjartab.tensorflow-ubuntu }
 
 License
 -------
 
-BSD
+MIT
 
 Author Information
 ------------------
 
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+Kjartan Bjørset
