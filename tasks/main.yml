@@ -1,3 +1,31 @@
 ---
-# tasks file for ansible-role-tensorflow-ubuntu
 
+- name: Install a .deb package from the internet.
+  apt:
+    deb: https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/cuda-repo-ubuntu1604_8.0.61-1_amd64.deb
+
+- name: install cuda
+  apt:
+    name: cuda=8.0.61-1
+    update_cache: yes 
+
+- name: Install cudnn
+  apt:
+    deb: /tmp/libcudnn6_6.0.21-1+cuda8.0_amd64.deb
+
+
+- name: Install nvidia-cuda-toolkit
+  apt: name=nvidia-cuda-toolkit
+
+- name: python
+  apt: name={{item}}
+  with_items:
+    - python-virtualenv
+    - python3-pip
+    - python3-venv
+    - python3-dev
+    
+- pip:
+    name: tensorflow==1.4
+    virtualenv: /opt/tensorflow-venv
+    virtualenv_command: /usr/bin/python3.5 -m venv
