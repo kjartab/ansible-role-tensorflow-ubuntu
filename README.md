@@ -9,6 +9,7 @@ Requirements
 ------------
 
 - NVIDIA CUDA 3.x compatible graphics card
+- Download CUDNN (requires login) and put in directory /tmp/libcudnn6_6.0.21-1+cuda8.0_amd64.deb
 
 Role Variables
 --------------

@@ -26,6 +26,6 @@
     - python3-dev
     
 - pip:
-    name: tensorflow==1.4
+    name: tensorflow-gpu==1.4
     virtualenv: /opt/tensorflow-venv
     virtualenv_command: /usr/bin/python3.5 -m venv
